@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 function t_profile {
-  local shome="${_git_crypthome:-"$(cd -P -- "$(dirname -- "$BASH_SOURCE")/.." && pwd -P)"}"
+  local shome="${_git_crypt_home:-"$(cd -P -- "$(dirname -- "$BASH_SOURCE")/.." && pwd -P)"}"
   PATH="$shome/bin:$PATH"
 }
 
