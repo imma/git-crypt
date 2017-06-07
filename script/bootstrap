@@ -10,6 +10,9 @@ function bootstrap {
       ;;
 
     Linux)
+      sudo apt-get update
+      sudo apt-get install -y libssl-dev
+
       mkdir -p "$shome/vendor"
       rm -rf "$shome/vendor/git-crypt"
       git clone git@github.com:AGWA/git-crypt "$shome/vendor/git-crypt"
