@@ -21,6 +21,7 @@ function bootstrap {
       env CPATH="$PKG_HOME/install/include" make
       chmod 755 git-crypt
       mv git-crypt "$shome/bin/"
+      rm -rf "$shome/vendor/git-crypt"
       ;;
   esac
 }
