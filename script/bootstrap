@@ -16,11 +16,12 @@ function bootstrap {
       mkdir -p "$shome/vendor"
       rm -rf "$shome/vendor/git-crypt"
       git clone git@github.com:AGWA/git-crypt "$shome/vendor/git-crypt"
-      cd "$shome/vendor/git-crypt"
+      pushd "$shome/vendor/git-crypt"
 
       env CPATH="$PKG_HOME/install/include" make
       chmod 755 git-crypt
       mv git-crypt "$shome/bin/"
+      popd
       rm -rf "$shome/vendor/git-crypt"
       ;;
   esac
