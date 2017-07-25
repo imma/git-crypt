@@ -10,8 +10,8 @@ function bootstrap {
       ;;
 
     Linux)
-      sudo apt-get update
-      sudo apt-get install -y libssl-dev
+      ${NOSUDO} sudo apt-get update
+      ${NOSUDO} sudo apt-get install -y libssl-dev
 
       mkdir -p "$shome/vendor"
       rm -rf "$shome/vendor/git-crypt"
