@@ -4,6 +4,11 @@ function main {
   local shome="$(cd -P -- "${BASH_SOURCE%/*}/.." && pwd -P)"
   source "$shome/script/profile"
 
+  case "${DISTRIB_ID}" in
+    Darwin|Ubuntu) true ;;
+    *) return 0 ;;
+  esac
+
   if [[ ! -x "$(type -P git-crypt)" ]]; then
     return 1
   fi
